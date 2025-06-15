@@ -1,0 +1,306 @@
+/*!
+OHA Global Styles
+Official Oman Hockey Association brand implementation
+Colors, Typography, and Global CSS Variables
+*/
+
+/* Google Fonts Import for Tajawal (Correct spelling) */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+/*--------------------------------------------------------------
+# CSS Variables (Custom Properties)
+--------------------------------------------------------------*/
+:root {
+    /* OHA Official Colors - Updated: Red as Primary */
+    --oha-primary-red: #E5201D;      /* Now Primary Color */
+    --oha-primary-green: #58AA35;    /* Now Secondary Color */
+    --oha-light-gray: #D1D3D4;
+    --oha-dark-gray: #58595C;
+    --oha-white: #FFFFFF;
+    --oha-black: #000000;
+    
+    /* Color Aliases for easier usage */
+    --oha-primary: var(--oha-primary-red);
+    --oha-secondary: var(--oha-primary-green);
+    --oha-accent: var(--oha-primary-green);
+    
+    /* Typography - Updated to use Tajawal (correct spelling) */
+    --oha-font-family: 'Tajawal', 'Segoe UI', 'Arial Unicode MS', 'Tahoma', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    --oha-font-size-base: 16px;
+    --oha-line-height-base: 1.6;
+    
+    /* Font Weights - Tajwal specific weights */
+    --oha-font-extralight: 200;
+    --oha-font-light: 300;
+    --oha-font-regular: 400;
+    --oha-font-medium: 500;
+    --oha-font-bold: 700;
+    --oha-font-extrabold: 800;
+    --oha-font-black: 900;
+    
+    /* Spacing */
+    --oha-spacing-xs: 0.5rem;
+    --oha-spacing-sm: 1rem;
+    --oha-spacing-md: 1.5rem;
+    --oha-spacing-lg: 2rem;
+    --oha-spacing-xl: 3rem;
+    --oha-spacing-xxl: 4rem;
+    
+    /* Container Widths */
+    --oha-container-max: 1200px;
+    --oha-container-padding: 20px;
+    
+    /* Border Radius */
+    --oha-border-radius: 4px;
+    --oha-border-radius-lg: 8px;
+    
+    /* Shadows */
+    --oha-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --oha-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --oha-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    /* Transitions */
+    --oha-transition: all 0.3s ease;
+    --oha-transition-fast: all 0.15s ease;
+}
+
+/*--------------------------------------------------------------
+# Global Typography Reset with OHA Brand - Updated for Tajawal
+--------------------------------------------------------------*/
+* {
+    font-family: 'Tajawal', 'Segoe UI', 'Arial Unicode MS', 'Tahoma', 'Arial', 'Helvetica Neue', Helvetica, sans-serif !important;
+}
+
+body {
+    font-family: var(--oha-font-family) !important;
+    font-size: var(--oha-font-size-base);
+    line-height: var(--oha-line-height-base);
+    color: var(--oha-dark-gray);
+    background-color: var(--oha-white);
+    font-weight: var(--oha-font-regular);
+}
+
+/* Headings with OHA Brand Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--oha-font-family) !important;
+    color: var(--oha-primary-red);
+    line-height: 1.2;
+    margin: 0 0 var(--oha-spacing-md) 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: var(--oha-font-extrabold);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: var(--oha-font-bold);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: var(--oha-font-medium);
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: var(--oha-font-medium);
+}
+
+h5 {
+    font-size: 1.125rem;
+    font-weight: var(--oha-font-medium);
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: var(--oha-font-medium);
+}
+
+/* Paragraphs and Text */
+p {
+    margin: 0 0 var(--oha-spacing-md) 0;
+}
+
+/* Links with OHA Brand Colors */
+a {
+    color: var(--oha-primary-red);
+    text-decoration: none;
+    transition: var(--oha-transition-fast);
+}
+
+a:hover,
+a:focus {
+    color: var(--oha-primary-green);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--oha-primary-red);
+}
+
+/*--------------------------------------------------------------
+# Container and Layout
+--------------------------------------------------------------*/
+.oha-container {
+    max-width: var(--oha-container-max);
+    margin: 0 auto;
+    padding: 0 var(--oha-container-padding);
+}
+
+.oha-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.oha-col {
+    flex: 1;
+    padding: 0 10px;
+}
+
+/*--------------------------------------------------------------
+# OHA Button Styles
+--------------------------------------------------------------*/
+.oha-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--oha-primary-red);
+    color: var(--oha-white);
+    font-family: var(--oha-font-family);
+    font-weight: var(--oha-font-medium);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--oha-border-radius);
+    cursor: pointer;
+    transition: var(--oha-transition);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.oha-btn:hover,
+.oha-btn:focus {
+    background-color: var(--oha-primary-green);
+    color: var(--oha-white);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--oha-shadow-md);
+}
+
+.oha-btn:active {
+    transform: translateY(0);
+    box-shadow: var(--oha-shadow-sm);
+}
+
+/* Button Variants */
+.oha-btn--secondary {
+    background-color: var(--oha-primary-green);
+    color: var(--oha-white);
+}
+
+.oha-btn--secondary:hover,
+.oha-btn--secondary:focus {
+    background-color: var(--oha-primary-red);
+}
+
+.oha-btn--outline {
+    background-color: transparent;
+    color: var(--oha-primary-red);
+    border: 2px solid var(--oha-primary-red);
+}
+
+.oha-btn--outline:hover,
+.oha-btn--outline:focus {
+    background-color: var(--oha-primary-red);
+    color: var(--oha-white);
+}
+
+.oha-btn--large {
+    padding: 16px 32px;
+    font-size: 1.125rem;
+}
+
+.oha-btn--small {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+}
+
+/*--------------------------------------------------------------
+# Utility Classes
+--------------------------------------------------------------*/
+/* Text Colors */
+.oha-text-green { color: var(--oha-primary-green) !important; }
+.oha-text-red { color: var(--oha-primary-red) !important; }
+.oha-text-gray { color: var(--oha-dark-gray) !important; }
+.oha-text-light-gray { color: var(--oha-light-gray) !important; }
+.oha-text-white { color: var(--oha-white) !important; }
+
+/* Background Colors */
+.oha-bg-green { background-color: var(--oha-primary-green) !important; }
+.oha-bg-red { background-color: var(--oha-primary-red) !important; }
+.oha-bg-gray { background-color: var(--oha-dark-gray) !important; }
+.oha-bg-light-gray { background-color: var(--oha-light-gray) !important; }
+.oha-bg-white { background-color: var(--oha-white) !important; }
+
+/* Font Weights */
+.oha-font-extralight { font-weight: var(--oha-font-extralight) !important; }
+.oha-font-light { font-weight: var(--oha-font-light) !important; }
+.oha-font-regular { font-weight: var(--oha-font-regular) !important; }
+.oha-font-medium { font-weight: var(--oha-font-medium) !important; }
+.oha-font-bold { font-weight: var(--oha-font-bold) !important; }
+.oha-font-extrabold { font-weight: var(--oha-font-extrabold) !important; }
+.oha-font-black { font-weight: var(--oha-font-black) !important; }
+
+/* Text Alignment */
+.oha-text-left { text-align: left !important; }
+.oha-text-center { text-align: center !important; }
+.oha-text-right { text-align: right !important; }
+
+/* Spacing Utilities */
+.oha-mb-0 { margin-bottom: 0 !important; }
+.oha-mb-sm { margin-bottom: var(--oha-spacing-sm) !important; }
+.oha-mb-md { margin-bottom: var(--oha-spacing-md) !important; }
+.oha-mb-lg { margin-bottom: var(--oha-spacing-lg) !important; }
+.oha-mb-xl { margin-bottom: var(--oha-spacing-xl) !important; }
+
+.oha-mt-0 { margin-top: 0 !important; }
+.oha-mt-sm { margin-top: var(--oha-spacing-sm) !important; }
+.oha-mt-md { margin-top: var(--oha-spacing-md) !important; }
+.oha-mt-lg { margin-top: var(--oha-spacing-lg) !important; }
+.oha-mt-xl { margin-top: var(--oha-spacing-xl) !important; }
+
+/* Display Utilities */
+.oha-hidden { display: none !important; }
+.oha-block { display: block !important; }
+.oha-inline-block { display: inline-block !important; }
+.oha-flex { display: flex !important; }
+.oha-justify-center { justify-content: center !important; }
+.oha-align-center { align-items: center !important; }
+
+/*--------------------------------------------------------------
+# Responsive Utilities
+--------------------------------------------------------------*/
+/* Show/Hide on mobile */
+@media (max-width: 767px) {
+    .oha-hide-mobile { display: none !important; }
+    .oha-show-mobile { display: block !important; }
+}
+
+/* Show/Hide on desktop */
+@media (min-width: 768px) {
+    .oha-hide-desktop { display: none !important; }
+    .oha-show-desktop { display: block !important; }
+    .oha-show-mobile { display: none !important; }
+}
+
+/* Navigation and UI Elements */
+nav, .main-navigation, .menu, .nav-menu {
+    font-family: var(--oha-font-family) !important;
+}
+
+/* Buttons and Forms */
+button, input, select, textarea, .btn, .button {
+    font-family: var(--oha-font-family) !important;
+} 

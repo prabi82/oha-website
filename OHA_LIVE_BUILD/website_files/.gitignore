@@ -1,0 +1,108 @@
+# WordPress Core Files (exclude core WordPress files)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/xmlrpc.php
+/readme.html
+/license.txt
+/index.php
+
+# Configuration Files (CRITICAL - contains passwords and keys)
+wp-config.php
+wp-config-local.php
+wp-config-production.php
+
+# Database Files (CRITICAL - contains all data)
+*.sql
+*.sql.gz
+*.sql.zip
+wordpress_e.sql
+
+# Backup Files
+*.zip
+*.tar.gz
+*.backup
+oha_website.zip
+
+# Uploads Directory (can be large, usually excluded)
+/wp-content/uploads/
+
+# Cache and Temporary Files
+/wp-content/cache/
+/wp-content/backup*/
+/wp-content/backups/
+/wp-content/upgrade/
+/wp-content/w3tc-config/
+/tmp/
+/blogs/
+
+# Plugin and Theme Updates
+/wp-content/plugins/*/
+!/wp-content/plugins/index.php
+
+# Keep only our custom theme
+/wp-content/themes/*/
+!/wp-content/themes/oha-theme/
+!/wp-content/themes/index.php
+
+# WordPress Generated Files
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+
+# Development and Testing Files
+fix-theme.php
+test-theme.php
+refresh-themes.php
+clear-opcache.php
+clear-transients.php
+log-finder.php
+reset-wordpress-urls.php
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Cursor AI Files
+.cursor/
+.cursorrules
+
+# Node.js (if using build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+/wp-content/debug.log
+error_log
+
+# Environment Files
+.env
+.env.local
+.env.production
+
+# Composer (if using)
+/vendor/
+composer.lock
+
+# WordPress Specific
+wp-config-sample.php
+/wp-content/mu-plugins/
+/wp-content/languages/
+/wp-content/upgrade/
+
+# Security
+.htpasswd
+.htaccess.bak
+
+# Temporary Files
+*.tmp
+*.temp 
