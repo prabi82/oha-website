@@ -1,0 +1,771 @@
+/*!
+OHA Responsive CSS
+Mobile-first responsive design for the OHA theme
+Breakpoints: 480px (mobile landscape), 768px (tablet), 1024px (desktop)
+*/
+
+/*--------------------------------------------------------------
+# Mobile First - Base Styles (up to 479px)
+--------------------------------------------------------------*/
+
+/* Header - Mobile */
+.header-contact-info {
+    display: none;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+.main-navigation ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--oha-primary-green);
+    box-shadow: var(--oha-shadow-lg);
+    z-index: 999;
+}
+
+.main-navigation.toggled ul {
+    display: flex;
+}
+
+.main-navigation ul ul {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    min-width: auto;
+}
+
+/* Layout - Mobile */
+.single-post-layout,
+.archive-layout,
+.page-layout,
+.search-layout {
+    grid-template-columns: 1fr;
+    gap: var(--oha-spacing-lg);
+}
+
+.single-post-sidebar,
+.archive-sidebar,
+.page-sidebar,
+.search-sidebar {
+    position: static;
+    margin-top: var(--oha-spacing-lg);
+}
+
+/* Hero Section - Mobile */
+.hero-title {
+    font-size: 2rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+}
+
+.hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.oha-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+}
+
+/* Section Headers - Mobile */
+.oha-section-title {
+    font-size: 1.8rem;
+}
+
+.oha-page-title {
+    font-size: 1.8rem;
+}
+
+/* News Grid - Mobile */
+.news-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Video Grid - Mobile */
+.video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Sponsors Grid - Mobile */
+.sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Footer - Mobile */
+.footer-widgets {
+    grid-template-columns: 1fr;
+    gap: var(--oha-spacing-lg);
+}
+
+.footer-menu {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.footer-social {
+    gap: 15px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+}
+
+/* Post Cards - Mobile */
+.post-card-image {
+    height: 180px;
+}
+
+.post-card-content {
+    padding: var(--oha-spacing-md);
+}
+
+.entry-meta {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.entry-title {
+    font-size: 1.2rem;
+}
+
+/* Author Info - Mobile */
+.author-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.author-details {
+    text-align: center;
+}
+
+/* Taxonomies - Mobile */
+.entry-taxonomies {
+    flex-direction: column;
+    gap: var(--oha-spacing-sm);
+}
+
+/* Post Navigation - Mobile */
+.post-navigation {
+    grid-template-columns: 1fr;
+    gap: var(--oha-spacing-sm);
+}
+
+.nav-links a {
+    padding: var(--oha-spacing-md);
+}
+
+/* Archive Info - Mobile */
+.archive-info {
+    text-align: center;
+}
+
+/* 404 Page - Mobile */
+.error-404-grid {
+    grid-template-columns: 1fr;
+    gap: var(--oha-spacing-lg);
+}
+
+.error-404-nav {
+    gap: 10px;
+}
+
+.error-404-icon {
+    font-size: 3.5rem;
+}
+
+.error-404-title {
+    font-size: 1.5rem;
+}
+
+/* Search - Mobile */
+.search-form-section {
+    padding: var(--oha-spacing-md);
+}
+
+/* Back to Top - Mobile */
+.back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+}
+
+/* Contact Page - Mobile */
+.contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: var(--oha-spacing-lg);
+}
+
+.contact-form-container {
+    padding: var(--oha-spacing-lg);
+}
+
+.form-row {
+    grid-template-columns: 1fr;
+    gap: var(--oha-spacing-md);
+}
+
+.contact-item {
+    padding: var(--oha-spacing-sm);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+}
+
+.contact-details h2,
+.contact-form-container h2 {
+    font-size: 1.5rem;
+}
+
+.map-placeholder {
+    height: 250px;
+}
+
+.map-placeholder-content {
+    padding: var(--oha-spacing-md);
+}
+
+.map-placeholder-content i {
+    font-size: 2rem;
+}
+
+.map-placeholder-content h3 {
+    font-size: 1.2rem;
+}
+
+.contact-social .social-links {
+    justify-content: center;
+}
+
+/*--------------------------------------------------------------
+# Mobile Landscape - 480px and up
+--------------------------------------------------------------*/
+@media (min-width: 480px) {
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .hero-cta {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .oha-btn {
+        width: auto;
+    }
+    
+    /* Section Headers */
+    .oha-section-title {
+        font-size: 2rem;
+    }
+    
+    .oha-page-title {
+        font-size: 2rem;
+    }
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Video Grid */
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Sponsors Grid */
+    .sponsors-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Footer */
+    .footer-menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    /* Post Cards */
+    .post-card-image {
+        height: 200px;
+    }
+    
+    .entry-meta {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    /* 404 Page */
+    .error-404-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .error-404-icon {
+        font-size: 4rem;
+    }
+    
+    .error-404-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Contact Form */
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-item {
+        padding: var(--oha-spacing-md);
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .map-placeholder {
+        height: 300px;
+    }
+    
+    .map-placeholder-content i {
+        font-size: 2.5rem;
+    }
+    
+    .map-placeholder-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/*--------------------------------------------------------------
+# Tablet - 768px and up
+--------------------------------------------------------------*/
+@media (min-width: 768px) {
+    
+    /* Header */
+    .header-contact-info {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+    
+    .main-navigation ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+    }
+    
+    .main-navigation ul ul {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        background-color: var(--oha-white);
+        box-shadow: var(--oha-shadow-lg);
+        min-width: 220px;
+        flex-direction: column;
+    }
+    
+    /* Layout */
+    .single-post-layout,
+    .archive-layout,
+    .page-layout,
+    .search-layout {
+        grid-template-columns: 1fr 280px;
+        gap: var(--oha-spacing-xl);
+    }
+    
+    .single-post-sidebar,
+    .archive-sidebar,
+    .page-sidebar,
+    .search-sidebar {
+        position: sticky;
+        top: 100px;
+        margin-top: 0;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    /* Section Headers */
+    .oha-section-title {
+        font-size: 2.3rem;
+    }
+    
+    .oha-page-title {
+        font-size: 2.3rem;
+    }
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* Video Grid */
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* Sponsors Grid */
+    .sponsors-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    
+    /* Footer */
+    .footer-widgets {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--oha-spacing-xl);
+    }
+    
+    /* Post Cards */
+    .entry-title {
+        font-size: 1.4rem;
+    }
+    
+    /* Author Info */
+    .author-info {
+        flex-direction: row;
+        text-align: left;
+        gap: 20px;
+    }
+    
+    .author-details {
+        text-align: left;
+    }
+    
+    /* Taxonomies */
+    .entry-taxonomies {
+        flex-direction: row;
+        gap: var(--oha-spacing-md);
+    }
+    
+    /* Post Navigation */
+    .post-navigation {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--oha-spacing-md);
+    }
+    
+    /* 404 Page */
+    .error-404-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--oha-spacing-xl);
+    }
+    
+    .error-404-icon {
+        font-size: 4.5rem;
+    }
+    
+    .error-404-title {
+        font-size: 1.9rem;
+    }
+    
+    /* Contact Page Layout */
+    .contact-info-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--oha-spacing-xl);
+    }
+    
+    .contact-form-container {
+        padding: var(--oha-spacing-xl);
+    }
+    
+    .contact-details h2,
+    .contact-form-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .map-placeholder {
+        height: 350px;
+    }
+    
+    .map-placeholder-content i {
+        font-size: 3rem;
+    }
+    
+    .map-placeholder-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-social .social-links {
+        justify-content: flex-start;
+    }
+}
+
+/*--------------------------------------------------------------
+# Desktop - 1024px and up
+--------------------------------------------------------------*/
+@media (min-width: 1024px) {
+    
+    /* Layout */
+    .single-post-layout,
+    .archive-layout,
+    .page-layout,
+    .search-layout {
+        grid-template-columns: 1fr 300px;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    /* Section Headers */
+    .oha-section-title {
+        font-size: 2.5rem;
+    }
+    
+    .oha-page-title {
+        font-size: 2.5rem;
+    }
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    /* Video Grid */
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    /* Sponsors Grid */
+    .sponsors-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+    }
+    
+    /* Footer */
+    .footer-widgets {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Post Cards */
+    .entry-title {
+        font-size: 1.5rem;
+    }
+    
+    /* 404 Page */
+    .error-404-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .error-404-icon {
+        font-size: 5rem;
+    }
+    
+    .error-404-title {
+        font-size: 2rem;
+    }
+    
+    .map-placeholder {
+        height: 400px;
+    }
+    
+    .contact-details h2,
+    .contact-form-container h2 {
+        font-size: 2rem;
+    }
+}
+
+/*--------------------------------------------------------------
+# Large Desktop - 1200px and up
+--------------------------------------------------------------*/
+@media (min-width: 1200px) {
+    
+    /* News Grid */
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+    
+    /* Video Grid */
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+    
+    /* Sponsors Grid */
+    .sponsors-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 35px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Print Styles
+--------------------------------------------------------------*/
+@media print {
+    
+    /* Hide non-essential elements */
+    .header-nav-section,
+    .site-footer,
+    .back-to-top,
+    .error-404-nav,
+    .search-form-section,
+    .entry-readmore,
+    .post-navigation,
+    .archive-pagination,
+    .search-pagination {
+        display: none !important;
+    }
+    
+    /* Ensure good print layout */
+    .single-post-layout,
+    .archive-layout,
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .oha-post-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    /* Optimize colors for print */
+    .oha-page-header {
+        background: #fff !important;
+        color: #000 !important;
+        border-bottom: 2px solid #000;
+    }
+    
+    .oha-page-title {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+    
+    /* Ensure links are visible */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+    
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+}
+
+/*--------------------------------------------------------------
+# High DPI / Retina Display Support
+--------------------------------------------------------------*/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    
+    /* Ensure crisp rendering on high DPI displays */
+    .custom-logo,
+    .sponsor-logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/*--------------------------------------------------------------
+# Accessibility and Reduced Motion
+--------------------------------------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+    
+    /* Disable animations for users who prefer reduced motion */
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .oha-hero-slider {
+        /* Disable any slider auto-advance */
+    }
+}
+
+/*--------------------------------------------------------------
+# Focus and Keyboard Navigation Support
+--------------------------------------------------------------*/
+@media (prefers-reduced-motion: no-preference) {
+    
+    /* Enhanced focus indicators for keyboard navigation */
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: 3px solid var(--oha-primary-green);
+        outline-offset: 2px;
+    }
+    
+    .menu-toggle:focus,
+    .main-navigation a:focus {
+        outline-color: var(--oha-white);
+    }
+}
+
+/*--------------------------------------------------------------
+# Dark Mode Support (if browser supports)
+--------------------------------------------------------------*/
+@media (prefers-color-scheme: dark) {
+    
+    /* Optional: Implement dark mode if desired
+    :root {
+        --oha-white: #1a1a1a;
+        --oha-black: #ffffff;
+        --oha-dark-gray: #e0e0e0;
+        --oha-light-gray: #404040;
+    }
+    */
+} 
